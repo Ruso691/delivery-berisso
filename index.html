@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delivery Berisso — Plan de Negocios 2026</title>
+<title>Delivery Berisso — Plan de Negocios</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
@@ -111,10 +111,10 @@ section{padding:80px 0}
 .comm-wrap{margin-top:48px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r-xl);padding:36px}
 .comm-hdr{font-family:var(--fh);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:28px}
 .comm-bars{display:flex;flex-direction:column;gap:16px}
-.c-row{display:flex;align-items:center;gap:16px}
-.c-lbl{font-family:var(--fh);font-size:13px;font-weight:600;color:rgba(255,255,255,.65);min-width:110px}
+.c-row{display:flex;align-items:center;gap:8px}
+.c-lbl{font-family:var(--fh);font-size:11px;font-weight:600;color:rgba(255,255,255,.65);min-width:90px;max-width:90px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .c-track{flex:1;height:38px;background:rgba(255,255,255,.06);border-radius:var(--r-sm);overflow:hidden}
-.c-fill{height:100%;border-radius:var(--r-sm);display:flex;align-items:center;padding:0 14px;font-family:var(--fh);font-weight:700;font-size:13px;color:white;transition:width 1100ms cubic-bezier(.4,0,.2,1);width:0}
+.c-fill{height:100%;border-radius:var(--r-sm);display:flex;align-items:center;padding:0 10px;font-family:var(--fh);font-weight:700;font-size:12px;color:white;transition:width 1100ms cubic-bezier(.4,0,.2,1);width:0}
 .b-r{background:linear-gradient(90deg,#DC2626,#EF4444)}.b-o{background:linear-gradient(90deg,#EA580C,#F97316)}.b-b{background:linear-gradient(90deg,#1D4ED8,#3B82F6)}
 
 /* FASES */
@@ -218,6 +218,7 @@ section{padding:80px 0}
     <ul class="nav-links">
       <li><a href="#oportunidad">Oportunidad</a></li>
       <li><a href="#modelo">Modelo</a></li>
+      <li><a href="#operativo">Operativo</a></li>
       <li><a href="#fases">Plan</a></li>
       <li><a href="#economics">Economics</a></li>
       <li><a href="#inversion">Inversión</a></li>
@@ -238,7 +239,7 @@ section{padding:80px 0}
     <div class="wrap">
       <div class="h-badge"><span class="h-badge-dot"></span>Plan de Negocios &mdash; 2026</div>
       <h1 class="h-title">El delivery<br>que Berisso<br><span class="acc">necesita.</span></h1>
-      <p class="h-sub">100.000 habitantes. Rappi y PedidosYa sin cobertura real. Una oportunidad sin explotar en la puerta de al lado.</p>
+      <p class="h-sub">100.000 habitantes. Rappi y PedidosYa sin cobertura real. Una oportunidad sin explotar.</p>
       <div class="h-stats">
         <div class="s-pill"><span class="s-num">100k<sup>+</sup></span><span class="s-div"></span><span class="s-lbl">habitantes</span></div>
         <div class="s-pill"><span class="s-num">0</span><span class="s-div"></span><span class="s-lbl">competidores reales</span></div>
@@ -302,14 +303,14 @@ section{padding:80px 0}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
         <h3>Repartidores propios</h3>
-        <p>Reclutados como empleo local. La pizzería de Pablo ya recibe candidatos a diario &mdash; el pool de recursos humanos está ahí.</p>
+        <p>Reclutados como empleo local. La pizzería de Pablo, candidata a comercio ancla, ya recibe pedidos de trabajo a diario &mdash; el pool de recursos humanos está ahí, independientemente de si se suma o no.</p>
       </div>
       <div class="mod-feat rv d3">
         <div class="mod-ico ico-g">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
         </div>
-        <h3>Comercios piloto</h3>
-        <p>Pizzería de Pablo (2 locales en Berisso, 1 en La Plata) como ancla. Más peluquería local y farmacia para venta libre.</p>
+        <h3>Comercio ancla en gestión</h3>
+        <p>Pizzería de Pablo (2 locales en Berisso, 1 en La Plata) como candidato principal &mdash; alta probabilidad, en conversación, no confirmado. Más peluquería local y farmacia para venta libre.</p>
       </div>
       <div class="mod-feat rv d4">
         <div class="mod-ico ico-p">
@@ -324,28 +325,80 @@ section{padding:80px 0}
       <div class="comm-bars">
         <div class="c-row">
           <span class="c-lbl">Rappi / PY</span>
-          <div class="c-track"><div class="c-fill b-r" data-w="82">25–35%</div></div>
+          <div class="c-track"><div class="c-fill b-r" data-w="82" style="white-space:nowrap">25–35%</div></div>
         </div>
         <div class="c-row">
           <span class="c-lbl">Con logística</span>
-          <div class="c-track"><div class="c-fill b-o" data-w="52">15–18%</div></div>
+          <div class="c-track"><div class="c-fill b-o" data-w="52" style="white-space:nowrap">15–18%</div></div>
         </div>
         <div class="c-row">
-          <span class="c-lbl">Solo marketplace</span>
-          <div class="c-track"><div class="c-fill b-b" data-w="28">8–12%</div></div>
+          <span class="c-lbl" style="font-size:11px;white-space:nowrap">Solo marketplace</span>
+          <div class="c-track"><div class="c-fill b-b" data-w="28" style="min-width:72px;white-space:nowrap">8–12%</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 03 FASES -->
+<!-- 03 LEGAL Y OPERATIVO -->
+<section id="operativo" style="background:var(--gray-50)">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--red)"></span><span style="color:var(--red)">03 — Legal y operativo</span></div>
+      <h2 class="s-title">Lo que hay que<br>resolver antes de lanzar.</h2>
+      <p class="s-lead">No son detalles para "ver después" &mdash; cada uno de estos puntos cambia costos, riesgos o el diseño de la app.</p>
+    </div>
+    <div class="mod-grid" style="margin-top:48px">
+      <div class="comp-card comp-light rv d1" style="padding:32px">
+        <div class="comp-name comp-name-l" style="font-size:19px;display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;background:var(--red-light);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>Repartidores: riesgo de relación laboral encubierta</div>
+        <p class="comp-det comp-det-l" style="margin-top:14px">En abril de 2026 la Corte Suprema bonaerense confirmó multas millonarias a Rappi y PedidosYa por encuadrar repartidores como monotributistas cuando en la práctica había relación de dependencia (control de horarios, asignación algorítmica, sanciones por desconexión). Berisso es provincia de Buenos Aires &mdash; el fallo aplica directo.</p>
+        <p class="comp-det comp-det-l" style="margin-top:10px"><strong style="color:var(--dark)">Mitigación:</strong> monotributo sin exclusividad ni horarios fijos obligatorios, sin sanciones disciplinarias vía app. Esquema revisado con abogado laboralista antes del lanzamiento, no después.</p>
+      </div>
+      <div class="comp-card comp-light rv d2" style="padding:32px">
+        <div class="comp-name comp-name-l" style="font-size:19px;display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;background:var(--yellow-light);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Seguros y responsabilidad civil</div>
+        <p class="comp-det comp-det-l" style="margin-top:14px">Un accidente de un repartidor en horario de entrega puede generar responsabilidad sobre el negocio si no está bien encuadrado. En la práctica, PedidosYa deja el seguro de la moto a cargo del repartidor sin auditarlo a fondo al dar de alta &mdash; exigirlo de entrada frena candidatos, y en Berisso la mayoría no lo tiene por el trámite que implica.</p>
+        <p class="comp-det comp-det-l" style="margin-top:10px"><strong style="color:var(--dark)">Trade-off real:</strong> exigir seguro comercial de entrada reduce el pool de repartidores disponibles (igual que le pasaría a PedidosYa). No exigirlo deja expuesto al negocio ante un accidente. Definir con un abogado qué nivel mínimo de cobertura es aceptable sin espantar candidatos &mdash; no asumir que "como lo hace PedidosYa" significa que el riesgo está cubierto.</p>
+      </div>
+      <div class="comp-card comp-light rv d3" style="padding:32px">
+        <div class="comp-name comp-name-l" style="font-size:19px;display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;background:var(--blue-pale);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg></span>Habilitación municipal</div>
+        <p class="comp-det comp-det-l" style="margin-top:14px">El trámite general "Habilitación de Comercios" de la Municipalidad de Berisso (Dirección de Control Urbano, tel. 0221 461-7797) pide planos del local, certificado de Bomberos, partida dominial y otros requisitos pensados para un comercio físico &mdash; no hay categoría publicada para una plataforma sin local de atención al público.</p>
+        <p class="comp-det comp-det-l" style="margin-top:10px"><strong style="color:var(--dark)">A confirmar directamente con el municipio:</strong> si el agregador encuadra en este trámite en versión reducida, o en otra figura. Berazategui, municipio vecino, optó por una vía distinta: armó su propia plataforma pública ("Bera Delivery") para listar comercios con envío, en vez de regular al agregador como comercio tradicional &mdash; vale la pena plantearlo como opción en la conversación con Berisso.</p>
+      </div>
+      <div class="comp-card comp-light rv d4" style="padding:32px">
+        <div class="comp-name comp-name-l" style="font-size:19px;display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;background:var(--green-light);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>Soporte y reclamos &mdash; bot in-app</div>
+        <p class="comp-det comp-det-l" style="margin-top:14px">Canal de soporte integrado en la app (no WhatsApp), con acceso directo al pedido del usuario que escribe. El bot resuelve casos simples y predecibles (demoras, faltantes verificables) y deriva todo lo demás a una cola de revisión humana: primero un socio, después un empleado.</p>
+        <p class="comp-det comp-det-l" style="margin-top:10px"><strong style="color:var(--dark)">Reglas fijas:</strong> quién paga cada error (comercio, repartidor o la app, según el origen) decidido antes del lanzamiento, no caso por caso.</p>
+      </div>
+      <div class="comp-card comp-light rv d5" style="padding:32px">
+        <div class="comp-name comp-name-l" style="font-size:19px;display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;background:#F3E8FF;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>Medio de pago</div>
+        <p class="comp-det comp-det-l" style="margin-top:14px">Mercado Pago integrado como opción principal + efectivo contra entrega con tope de monto. Regla fija: el pedido no se confirma al comercio hasta que el pago esté aprobado &mdash; nadie pierde tiempo en pedidos que después no se cobran.</p>
+        <p class="comp-det comp-det-l" style="margin-top:10px"><strong style="color:var(--dark)">Si el pago falla:</strong> cartel/notificación en la app con opción de reintentar o cambiar a efectivo &mdash; sin involucrar al bot de soporte.</p>
+      </div>
+      <div class="comp-card comp-light rv" style="padding:32px">
+        <div class="comp-name comp-name-l" style="font-size:19px;display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;background:var(--gray-100);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/></svg></span>Retención del comercio ancla</div>
+        <p class="comp-det comp-det-l" style="margin-top:14px">Si Pablo (pizzería) se confirma como comercio ancla, cuanto más éxito le dé la app, más incentivo tiene de armar su propio canal a futuro. Mitigación: permanencia mínima de 6&ndash;12 meses a cambio de condiciones preferenciales de lanzamiento, y no depender de un solo comercio ancla para sostener el volumen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 FASES -->
 <section id="fases">
   <div class="wrap">
     <div class="rv">
-      <div class="s-tag"><span class="s-tagline" style="background:var(--blue)"></span><span style="color:var(--blue)">03 — Plan de implementación</span></div>
+      <div class="s-tag"><span class="s-tagline" style="background:var(--blue)"></span><span style="color:var(--blue)">04 — Plan de implementación</span></div>
       <h2 class="s-title">Del primer comercio<br>al lanzamiento.</h2>
-      <p class="s-lead">Cinco etapas con timing real. El desarrollo de la app corre en paralelo a la validación comercial.</p>
+      <p class="s-lead">Seis etapas, escalonadas en el tiempo &mdash; no se arranca con todo de una. El desarrollo de la app corre en paralelo a la validación comercial; el resto es secuencial.</p>
+    </div>
+    <div class="rv" style="margin-top:40px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:24px 28px;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+      <span style="font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-400);margin-right:6px">Horizonte estimado:</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:var(--blue-pale);color:var(--blue);font-family:var(--fh);font-size:12px;font-weight:700;padding:5px 12px;border-radius:var(--r-full)">Mes 1&ndash;3: validación + desarrollo</span>
+      <span style="color:var(--gray-400)">→</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:#FFF7ED;color:var(--orange);font-family:var(--fh);font-size:12px;font-weight:700;padding:5px 12px;border-radius:var(--r-full)">Mes 3&ndash;4: lanzamiento piloto</span>
+      <span style="color:var(--gray-400)">→</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:var(--green-light);color:var(--green);font-family:var(--fh);font-size:12px;font-weight:700;padding:5px 12px;border-radius:var(--r-full)">Mes 5&ndash;9: expansión</span>
+      <span style="color:var(--gray-400)">→</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:#F3E8FF;color:#7C3AED;font-family:var(--fh);font-size:12px;font-weight:700;padding:5px 12px;border-radius:var(--r-full)">Año 2+: mini dark store</span>
     </div>
     <div class="tl">
       <div class="tl-item rv d1">
@@ -353,9 +406,9 @@ section{padding:80px 0}
         <div class="tl-body">
           <div class="tl-phase">Etapa 0</div>
           <div class="tl-ttl">Validación comercial</div>
-          <div class="tl-time">Semanas 1–2</div>
+          <div class="tl-time">Mes 1 — Semanas 1–2</div>
           <div class="tl-tasks">
-            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reunión formal con Pablo (pizzería) &mdash; cerrar compromiso de lanzamiento</span></div>
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reunión formal con Pablo (pizzería), candidato a comercio ancla &mdash; buscar cerrar compromiso de lanzamiento</span></div>
             <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sumar 5–10 comercios (almacenes, kioscos, rotiserías) puerta a puerta. Comisión reducida o nula los primeros 60–90 días</span></div>
             <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Conseguir farmacia aliada habilitada para venta libre</span></div>
           </div>
@@ -366,7 +419,7 @@ section{padding:80px 0}
         <div class="tl-body">
           <div class="tl-phase">Etapa 1</div>
           <div class="tl-ttl">Desarrollo de la app</div>
-          <div class="tl-time">En paralelo &mdash; 6 a 10 semanas</div>
+          <div class="tl-time">Mes 1 a 3 — en paralelo, 6 a 10 semanas</div>
           <div class="tl-tasks">
             <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>App nativa Android + iOS con Flutter o React Native (una sola base de código)</span></div>
             <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reclutar 3–5 repartidores con timing ajustado al lanzamiento</span></div>
@@ -379,8 +432,8 @@ section{padding:80px 0}
         <div class="tl-body">
           <div class="tl-phase">Etapa 2</div>
           <div class="tl-ttl">Lanzamiento piloto</div>
-          <div class="tl-time">Una vez aprobada la app en ambas tiendas</div>
-          <p class="tl-txt">Lanzar con los comercios confirmados, la farmacia y los repartidores. Difusión por redes locales y boca en boca de la pizzería de Pablo, que ya tiene reconocimiento en Berisso.</p>
+          <div class="tl-time">Mes 3 — una vez aprobada la app en ambas tiendas</div>
+          <p class="tl-txt">Lanzar con los comercios confirmados y los repartidores. Difusión por redes locales y, si Pablo (pizzería) se suma como comercio ancla, su boca en boca ya tiene reconocimiento en Berisso.</p>
         </div>
       </div>
       <div class="tl-item rv d4">
@@ -388,7 +441,7 @@ section{padding:80px 0}
         <div class="tl-body">
           <div class="tl-phase">Etapa 3</div>
           <div class="tl-ttl">Medición y ajuste</div>
-          <div class="tl-time">Primer mes post-lanzamiento</div>
+          <div class="tl-time">Mes 4 — primer mes post-lanzamiento</div>
           <p class="tl-txt">Medir pedidos por semana, ticket promedio, retención y costo real por entrega vs. lo cobrado. Ajustar precios antes de sumar más comercios si el margen no cierra.</p>
         </div>
       </div>
@@ -397,7 +450,7 @@ section{padding:80px 0}
         <div class="tl-body">
           <div class="tl-phase">Etapa 4</div>
           <div class="tl-ttl">Expansión</div>
-          <div class="tl-time">Una vez validado el piloto</div>
+          <div class="tl-time">Mes 5 a 9 — una vez validado el piloto</div>
           <div class="tl-tasks">
             <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#FFF7ED"/><path d="M5 9l3 3 5-5" stroke="#EA580C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Más comercios en Berisso usando el caso piloto como prueba social</span></div>
             <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#FFF7ED"/><path d="M5 9l3 3 5-5" stroke="#EA580C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Los Talas cuando haya repartidores con capacidad disponible</span></div>
@@ -405,15 +458,31 @@ section{padding:80px 0}
           </div>
         </div>
       </div>
+
+      <div class="rv" style="display:flex;align-items:center;gap:16px;margin:8px 0 32px 0;padding-left:80px">
+        <div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--gray-200) 0 6px,transparent 6px 12px)"></div>
+        <span style="font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-400);white-space:nowrap">No antes de tener marca posicionada</span>
+        <div style="flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--gray-200) 0 6px,transparent 6px 12px)"></div>
+      </div>
+
+      <div class="tl-item rv">
+        <div class="tl-dot" style="background:linear-gradient(135deg,#059669,#7C3AED)">5</div>
+        <div class="tl-body">
+          <div class="tl-phase">Etapa 5 &mdash; Fase separada, no parte del lanzamiento</div>
+          <div class="tl-ttl">Mini dark store &mdash; marca posicionada</div>
+          <div class="tl-time">Año 2 en adelante &mdash; condicionado a datos reales del agregador</div>
+          <p class="tl-txt">Versión chica del modelo "PedidosYa Market": local de 40&ndash;60 m² (no 200&ndash;400), 150&ndash;300 productos de alta rotación (agua, gaseosas, lácteos, limpieza básica), 1&ndash;2 pickers, repartidores ya operativos retiran por ventanilla sin entrar al depósito. Pasa de marketplace puro a tener margen de producto propio &mdash; y también riesgo de inventario. Se evalúa con los datos reales del agregador ya en marcha, no antes.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 04 UNIT ECONOMICS -->
+<!-- 05 UNIT ECONOMICS -->
 <section id="economics">
   <div class="wrap">
     <div class="rv">
-      <div class="s-tag"><span class="s-tagline" style="background:var(--green)"></span><span style="color:var(--green)">04 — Unit economics</span></div>
+      <div class="s-tag"><span class="s-tagline" style="background:var(--green)"></span><span style="color:var(--green)">05 — Unit economics</span></div>
       <h2 class="s-title">Cómo se gana plata<br>por pedido.</h2>
       <p class="s-lead">Matemática simple. Lo que hay que validar con datos reales en la Etapa 3.</p>
     </div>
@@ -434,22 +503,23 @@ section{padding:80px 0}
         <div class="f-arr">→</div>
         <div class="f-block f-out">
           <div class="f-lbl">Costos</div>
-          <div class="f-amt">$1.800</div>
+          <div class="f-amt">$2.550</div>
           <div class="f-rows">
             <div class="f-row"><span class="f-rn">Pago repartidor</span><span class="f-rv">$1.800</span></div>
-            <div class="f-row"><span class="f-rn">Pasarela de pago</span><span class="f-rv">a confirmar</span></div>
+            <div class="f-row"><span class="f-rn">Mercado Pago (~5%)</span><span class="f-rv">$750</span></div>
           </div>
         </div>
         <div class="f-arr">→</div>
         <div class="f-block f-net">
           <div class="f-lbl">Margen bruto</div>
-          <div class="f-amt">$1.700</div>
+          <div class="f-amt">$950</div>
           <div class="f-rows">
-            <div class="f-row"><span class="f-rn">Por pedido</span><span class="f-rv">~11%</span></div>
-            <div class="f-row"><span class="f-rn">Antes de pasarela</span><span class="f-rv" style="color:#FCD34D">⚠ pendiente</span></div>
+            <div class="f-row"><span class="f-rn">Por pedido</span><span class="f-rv">~6,3%</span></div>
+            <div class="f-row"><span class="f-rn">Antes de IIBB</span><span class="f-rv" style="color:#FCD34D">⚠ pendiente</span></div>
           </div>
         </div>
       </div>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);margin-top:18px;line-height:1.6">Comisión de Mercado Pago estimada por analogía con checkout integrado en tiendas online (4,49%&ndash;5,99%) &mdash; a confirmar al integrar la API. No incluye Ingresos Brutos (IIBB), que depende del régimen y la provincia.</p>
     </div>
   </div>
 </section>
@@ -458,8 +528,8 @@ section{padding:80px 0}
 <section id="inversion">
   <div class="wrap">
     <div class="rv">
-      <div class="s-tag"><span class="s-tagline" style="background:var(--orange)"></span><span style="color:var(--orange)">05 — Inversión inicial</span></div>
-      <h2 class="s-title" style="color:white">Tres escenarios.<br>Un negocio real.</h2>
+      <div class="s-tag"><span class="s-tagline" style="background:var(--orange)"></span><span style="color:var(--orange)">06 — Inversión inicial</span></div>
+      <h2 class="s-title" style="color:white">Tres escenarios.</h2>
       <p class="s-lead" style="color:rgba(255,255,255,.45)">Conversión a USD al tipo de cambio de referencia de $1.500 (junio 2026). Los montos en pesos se mueven con la inflación.</p>
     </div>
     <div class="inv-cards">
@@ -491,18 +561,18 @@ section{padding:80px 0}
       <div class="inv-card ic-opt rv d3">
         <div class="ic-glow g-o"></div>
         <span class="ic-tag t-opt">Óptimo</span>
-        <div class="ic-usd">USD 6.533</div>
-        <div class="ic-ars">~$9.800.000 ARS</div>
+        <div class="ic-usd">USD 6.300</div>
+        <div class="ic-ars">~$9.450.000 ARS</div>
         <div class="ic-div"></div>
         <div class="ic-items">
           <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Runway completo de 5–6 meses</span></div>
-          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Moto 110cc propia (desde USD 832)</span></div>
-          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reserva para consulta legal (esquema farmacia)</span></div>
-          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Envío gratis de lanzamiento como gancho para primeros usuarios</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Envío gratis en el primer pedido, a todos los usuarios nuevos (gancho de adopción)</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reserva para consulta legal (esquema farmacia + repartidores)</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Colchón ampliado de garantía a repartidores ante picos de demanda</span></div>
         </div>
       </div>
     </div>
-    <p class="rate-note rv">Tipo de cambio: $1.500 ARS/USD (junio 2026) &mdash; reconfirmar cerca del lanzamiento. <strong style="color:rgba(255,255,255,.45)">Estructura legal recomendada:</strong> monotributo individual de quien factura + acuerdo privado por escrito sobre roles, dedicación y condiciones de salida. Sin necesidad de SRL todavía.</p>
+    <p class="rate-note rv">Tipo de cambio: $1.500 ARS/USD (junio 2026) &mdash; reconfirmar cerca del lanzamiento. <strong style="color:rgba(255,255,255,.45)">Estructura legal recomendada:</strong> monotributo individual de quien factura + acuerdo privado por escrito sobre roles, dedicación y condiciones de salida. Sin necesidad de SRL todavía. <strong style="color:rgba(255,255,255,.45)">Costos no incluidos en estos escenarios, a confirmar:</strong> Ingresos Brutos (IIBB, depende de provincia y régimen) y comisión exacta de Mercado Pago al integrar la API.</p>
   </div>
 </section>
 
@@ -510,26 +580,39 @@ section{padding:80px 0}
 <section id="riesgos">
   <div class="wrap">
     <div class="rv">
-      <div class="s-tag"><span class="s-tagline" style="background:var(--yellow)"></span><span style="color:var(--yellow)">06 — Riesgos a vigilar</span></div>
+      <div class="s-tag"><span class="s-tagline" style="background:var(--yellow)"></span><span style="color:var(--yellow)">07 — Riesgos a vigilar</span></div>
       <h2 class="s-title">Lo que puede fallar<br>y cómo mitigarlo.</h2>
-      <p class="s-lead">Ningún plan sobrevive sin ajustes. Estos son los seis puntos de quiebre a monitorear desde el día uno.</p>
+      <p class="s-lead">Ningún plan sobrevive sin ajustes. Estos son los puntos de quiebre a monitorear desde el día uno.</p>
     </div>
     <div class="rsk-grid">
-      <div class="rsk-card rv d1"><span class="rsk-n">1</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Comercios que no ven valor y se bajan tras el período gratis</div><p class="rsk-desc">Comisión reducida o nula los primeros 60–90 días + datos concretos de pedidos durante la prueba como argumento de continuidad.</p></div>
-      <div class="rsk-card rv d2"><span class="rsk-n">2</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Volumen insuficiente para sostener el pago a los repartidores</div><p class="rsk-desc">Garantía mínima diaria en las primeras semanas + ajustar número de repartidores activos a la demanda real. No escalar antes de tener los datos.</p></div>
-      <div class="rsk-card rv d3"><span class="rsk-n">3</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Costo real por entrega mayor que comisión + envío</div><p class="rsk-desc">Cotizar con moto-mandados locales antes del lanzamiento. Ajustar precios en Etapa 3 antes de escalar si el margen no cierra.</p></div>
-      <div class="rsk-card rv d4"><span class="rsk-n">4</span><span class="rsk-sev sev-l">Bajo</span><div class="rsk-ttl">PedidosYa activa flota propia en Berisso</div><p class="rsk-desc">Poco probable a corto plazo: ni siquiera cubre toda La Plata con flota propia. Ventana de 12–18 meses sin presión competitiva real.</p></div>
-      <div class="rsk-card rv d5"><span class="rsk-n">5</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Fricciones por dedicación desigual entre los socios</div><p class="rsk-desc">Acuerdo privado por escrito desde el día uno: roles, horas semanales esperadas y qué pasa si alguien quiere salir del proyecto.</p></div>
-      <div class="rsk-card rv"><span class="rsk-n">6</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Demoras en el desarrollo (rechazos de Apple, bugs, scope creep)</div><p class="rsk-desc">Dejar margen extra para revisión de Apple (1–2 semanas habituales). Congelar el scope antes de empezar a programar.</p></div>
+      <div class="rsk-card rv d1"><span class="rsk-n">1</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Reclasificación de repartidores como relación laboral</div><p class="rsk-desc">Fallo de la Corte bonaerense (abril 2026) penaliza el esquema monotributo + control vía app. Mitigación: sin exclusividad ni sanciones disciplinarias, revisado con abogado laboralista antes del lanzamiento.</p></div>
+      <div class="rsk-card rv d2"><span class="rsk-n">2</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Comercios que no ven valor y se bajan tras el período gratis</div><p class="rsk-desc">Comisión reducida o nula los primeros 60–90 días + datos concretos de pedidos durante la prueba como argumento de continuidad.</p></div>
+      <div class="rsk-card rv d3"><span class="rsk-n">3</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Volumen insuficiente para sostener el pago a los repartidores</div><p class="rsk-desc">Garantía mínima diaria en las primeras semanas + ajustar número de repartidores activos a la demanda real. No escalar antes de tener los datos.</p></div>
+      <div class="rsk-card rv d4"><span class="rsk-n">4</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Costo real por entrega mayor que comisión + envío</div><p class="rsk-desc">Cotizar con moto-mandados locales antes del lanzamiento. Ajustar precios en Etapa 3 antes de escalar si el margen no cierra.</p></div>
+      <div class="rsk-card rv d5"><span class="rsk-n">5</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Comercio ancla arma su propio canal a futuro</div><p class="rsk-desc">A más éxito le da la app a un comercio grande, más incentivo tiene de independizarse. Mitigación: permanencia mínima pactada + no depender de un solo comercio ancla.</p></div>
+      <div class="rsk-card rv"><span class="rsk-n">6</span><span class="rsk-sev sev-l">Bajo</span><div class="rsk-ttl">PedidosYa activa flota propia en Berisso</div><p class="rsk-desc">Poco probable a corto plazo: ni siquiera cubre toda La Plata con flota propia. Ventana de 12–18 meses sin presión competitiva real.</p></div>
+      <div class="rsk-card rv"><span class="rsk-n">7</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Fricciones por dedicación desigual entre los socios</div><p class="rsk-desc">Acuerdo privado por escrito desde el día uno: roles, horas semanales esperadas y qué pasa si alguien quiere salir del proyecto.</p></div>
+      <div class="rsk-card rv"><span class="rsk-n">8</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Demoras en el desarrollo (rechazos de Apple, bugs, scope creep)</div><p class="rsk-desc">Dejar margen extra para revisión de Apple (1–2 semanas habituales). Congelar el scope antes de empezar a programar.</p></div>
+    </div>
+
+    <div class="comm-wrap rv" style="background:var(--white);border-color:var(--gray-200);margin-top:64px">
+      <div class="comm-hdr" style="color:var(--gray-400)">Defensibilidad &mdash; qué evita que nos copien</div>
+      <p style="font-size:14px;color:var(--gray-600);line-height:1.75;margin-bottom:16px">La tecnología no protege nada: se replica con IA en semanas. Lo que de verdad sostiene la ventaja, en orden de fuerza real:</p>
+      <div class="ic-items">
+        <div class="ic-item" style="color:var(--gray-600)"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="var(--blue-pale)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong style="color:var(--dark)">Relación personal con los comercios</strong> &mdash; se construye estando presente y resolviendo rápido, no con un contrato.</span></div>
+        <div class="ic-item" style="color:var(--gray-600)"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="var(--blue-pale)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong style="color:var(--dark)">Ser el primero con volumen real</strong> &mdash; nadie se instala una segunda app si la primera ya resuelve el problema.</span></div>
+        <div class="ic-item" style="color:var(--gray-600)"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="var(--blue-pale)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong style="color:var(--dark)">Datos de comportamiento acumulados</strong> &mdash; qué pide cada zona, a qué hora, qué comercios retienen mejor.</span></div>
+        <div class="ic-item" style="color:var(--gray-600)"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="var(--blue-pale)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong style="color:var(--dark)">Conocimiento hiperlocal</strong> &mdash; Berisso no es prioridad de expansión para Rappi ni PedidosYa frente a ciudades más grandes.</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 07 MÉTRICAS -->
+<!-- 08 MÉTRICAS -->
 <section id="metricas">
   <div class="wrap">
     <div class="rv">
-      <div class="s-tag"><span class="s-tagline" style="background:var(--blue-mid)"></span><span style="color:var(--blue-mid)">07 — Métricas de éxito</span></div>
+      <div class="s-tag"><span class="s-tagline" style="background:var(--blue-mid)"></span><span style="color:var(--blue-mid)">08 — Métricas de éxito</span></div>
       <h2 class="s-title">Cuatro números que<br>dicen si funciona.</h2>
       <p class="s-lead">Si estas métricas no mejoran semana a semana, hay algo para ajustar antes de seguir escalando.</p>
     </div>
