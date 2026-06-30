@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delivery Berisso — Plan de Negocios 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1D4ED8;--blue-mid:#2563EB;--blue-light:#60A5FA;--blue-pale:#EFF6FF;
+  --orange:#EA580C;--orange-light:#FB923C;
+  --dark:#060D1F;--dark-2:#111827;--dark-3:#1E293B;
+  --white:#FFFFFF;--gray-50:#F8FAFC;--gray-100:#F1F5F9;--gray-200:#E2E8F0;
+  --gray-400:#94A3B8;--gray-600:#475569;--gray-900:#0F172A;
+  --green:#059669;--green-light:#D1FAE5;
+  --red:#DC2626;--red-light:#FEE2E2;
+  --yellow:#D97706;--yellow-light:#FEF3C7;
+  --fh:'Outfit',sans-serif;--fb:'Rubik',sans-serif;
+  --r-sm:8px;--r-md:16px;--r-lg:24px;--r-xl:32px;--r-full:9999px;
+  --sh-md:0 4px 16px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:18px;line-height:1.6;color:var(--dark);background:var(--white);overflow-x:hidden}
+
+/* TYPOGRAPHY */
+h1,h2,h3,h4{font-family:var(--fh);font-weight:700;line-height:1.08}
+
+/* LAYOUT */
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 600ms cubic-bezier(.4,0,.2,1),transform 600ms cubic-bezier(.4,0,.2,1)}
+.rv.on{opacity:1;transform:translateY(0)}
+.d1{transition-delay:100ms}.d2{transition-delay:200ms}.d3{transition-delay:300ms}.d4{transition-delay:400ms}.d5{transition-delay:500ms}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:background 220ms ease,box-shadow 220ms ease}
+#nav.scrolled{background:rgba(6,13,31,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(255,255,255,.07)}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{font-family:var(--fh);font-weight:800;font-size:19px;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:8px}
+.nav-dot{width:8px;height:8px;background:var(--orange);border-radius:50%;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;font-weight:600;font-family:var(--fh);letter-spacing:.02em;transition:color 180ms}
+.nav-links a:hover{color:var(--white)}
+.nav-tog{display:none;background:none;border:none;cursor:pointer;padding:6px;color:white}
+@media(max-width:720px){.nav-links{display:none}.nav-tog{display:block}}
+
+/* HERO */
+#hero{background:var(--dark);min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:0}
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(to bottom,transparent 0%,black 25%,black 75%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 25%,black 75%,transparent 100%)}
+.h-glow{position:absolute;border-radius:50%;filter:blur(110px);pointer-events:none}
+.h-g1{width:560px;height:560px;background:rgba(29,78,216,.38);top:-80px;right:-100px}
+.h-g2{width:380px;height:380px;background:rgba(234,88,12,.22);bottom:80px;left:-120px}
+.h-cnt{position:relative;z-index:2;padding:96px 0 80px}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(29,78,216,.18);border:1px solid rgba(29,78,216,.38);color:var(--blue-light);font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:6px 14px;border-radius:var(--r-full);margin-bottom:28px}
+.h-badge-dot{width:6px;height:6px;background:var(--blue-light);border-radius:50%;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+.h-title{font-family:var(--fh);font-size:clamp(48px,10vw,100px);font-weight:900;line-height:.92;letter-spacing:-.03em;color:var(--white);margin-bottom:24px}
+.h-title .acc{color:var(--orange)}
+.h-sub{font-size:clamp(15px,2.2vw,19px);color:rgba(255,255,255,.5);max-width:520px;line-height:1.65;margin-bottom:48px;font-weight:300}
+.h-stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.s-pill{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:var(--r-full);padding:10px 20px}
+.s-num{font-family:var(--fh);font-weight:800;font-size:21px;color:var(--white);line-height:1}
+.s-num sup{font-size:.5em;vertical-align:super}
+.s-div{width:1px;height:22px;background:rgba(255,255,255,.12)}
+.s-lbl{font-size:13px;color:rgba(255,255,255,.45)}
+.h-hint{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.25);font-size:12px;font-family:var(--fh);letter-spacing:.07em}
+.h-line{width:40px;height:1px;background:rgba(255,255,255,.18)}
+
+/* SECTION HEADERS */
+.s-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.s-tagline{width:22px;height:2px;border-radius:2px}
+.s-title{font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-.025em;line-height:1.05;margin-bottom:20px}
+.s-lead{font-size:17px;line-height:1.68;color:var(--gray-600);max-width:580px}
+
+/* OPORTUNIDAD */
+#oportunidad{background:var(--white)}
+.opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:48px 0}
+@media(max-width:600px){.opp-grid{grid-template-columns:1fr}}
+.comp-card{border-radius:var(--r-lg);padding:36px;border:1px solid var(--gray-200);position:relative;overflow:hidden}
+.comp-dark{background:var(--dark);border-color:transparent}
+.comp-light{background:var(--gray-50)}
+.comp-name{font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:20px}
+.comp-name-d{color:rgba(255,255,255,.45)}.comp-name-l{color:var(--gray-600)}
+.zero{display:inline-flex;align-items:center;justify-content:center;width:68px;height:68px;background:var(--red);color:var(--white);font-family:var(--fh);font-weight:900;font-size:16px;letter-spacing:.04em;border-radius:var(--r-md);margin-bottom:20px}
+.comp-det{font-size:14px;line-height:1.65}
+.comp-det-d{color:rgba(255,255,255,.38)}.comp-det-l{color:var(--gray-600)}
+.comp-proof{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:12px;font-weight:700;font-family:var(--fh);letter-spacing:.05em;color:var(--green)}
+.proof-dot{width:6px;height:6px;background:currentColor;border-radius:50%}
+.mkt-block{background:linear-gradient(135deg,var(--blue) 0%,#1E40AF 100%);border-radius:var(--r-xl);padding:52px 44px;color:white;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.mkt-num{font-family:var(--fh);font-size:clamp(52px,8vw,88px);font-weight:900;line-height:1;letter-spacing:-.03em}
+.mkt-num sup{font-size:.4em;vertical-align:super}
+.mkt-lbl{font-size:15px;opacity:.6;font-weight:300;margin-top:8px}
+.mkt-desc{max-width:360px;font-size:15px;opacity:.7;line-height:1.65}
+
+/* MODELO */
+#modelo{background:var(--dark);color:var(--white)}
+.mod-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+@media(max-width:720px){.mod-grid{grid-template-columns:1fr}}
+.mod-feat{padding:32px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r-lg);transition:background 200ms,border-color 200ms}
+.mod-feat:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12)}
+.mod-ico{width:46px;height:46px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.ico-b{background:rgba(29,78,216,.25)}.ico-o{background:rgba(234,88,12,.25)}.ico-g{background:rgba(5,150,105,.25)}.ico-p{background:rgba(124,58,237,.25)}
+.mod-feat h3{font-size:19px;font-weight:700;margin-bottom:10px;color:var(--white)}
+.mod-feat p{font-size:14px;color:rgba(255,255,255,.45);line-height:1.65}
+.comm-wrap{margin-top:48px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r-xl);padding:36px}
+.comm-hdr{font-family:var(--fh);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:28px}
+.comm-bars{display:flex;flex-direction:column;gap:16px}
+.c-row{display:flex;align-items:center;gap:16px}
+.c-lbl{font-family:var(--fh);font-size:13px;font-weight:600;color:rgba(255,255,255,.65);min-width:110px}
+.c-track{flex:1;height:38px;background:rgba(255,255,255,.06);border-radius:var(--r-sm);overflow:hidden}
+.c-fill{height:100%;border-radius:var(--r-sm);display:flex;align-items:center;padding:0 14px;font-family:var(--fh);font-weight:700;font-size:13px;color:white;transition:width 1100ms cubic-bezier(.4,0,.2,1);width:0}
+.b-r{background:linear-gradient(90deg,#DC2626,#EF4444)}.b-o{background:linear-gradient(90deg,#EA580C,#F97316)}.b-b{background:linear-gradient(90deg,#1D4ED8,#3B82F6)}
+
+/* FASES */
+#fases{background:var(--gray-50)}
+.tl{margin-top:48px;position:relative}
+.tl::before{content:'';position:absolute;left:27px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blue) 0%,var(--orange) 100%);border-radius:2px}
+@media(max-width:580px){.tl::before{left:19px}}
+.tl-item{display:flex;gap:24px;margin-bottom:36px;position:relative}
+.tl-dot{width:56px;height:56px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:900;font-size:19px;color:white;flex-shrink:0;position:relative;z-index:1}
+@media(max-width:580px){.tl-dot{width:40px;height:40px;font-size:15px;border-radius:10px}}
+.d-0{background:var(--blue)}.d-1{background:linear-gradient(135deg,var(--blue),#3B82F6)}.d-2{background:linear-gradient(135deg,#3B82F6,var(--orange))}.d-3{background:var(--orange)}.d-4{background:linear-gradient(135deg,var(--orange),#059669)}
+.tl-body{flex:1;padding-bottom:24px}
+.tl-phase{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px}
+.tl-ttl{font-size:21px;font-weight:700;color:var(--dark);margin-bottom:10px}
+.tl-time{display:inline-flex;align-items:center;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r-full);padding:3px 12px;font-size:12px;font-weight:600;font-family:var(--fh);color:var(--gray-600);margin-bottom:16px}
+.tl-txt{font-size:14px;color:var(--gray-600);line-height:1.65}
+.tl-tasks{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.t-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--gray-600)}
+.t-chk{width:18px;height:18px;flex-shrink:0;margin-top:2px}
+
+/* UNIT ECONOMICS */
+#economics{background:var(--white)}
+.eco-box{margin-top:48px;background:var(--dark);border-radius:var(--r-xl);padding:44px;color:white}
+.eco-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:12px}
+.eco-lbl{font-family:var(--fh);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35)}
+.eco-note{font-size:13px;color:rgba(255,255,255,.25);font-style:italic}
+.flow{display:flex;align-items:stretch;border-radius:var(--r-md);overflow:hidden}
+@media(max-width:600px){.flow{flex-direction:column}}
+.f-block{flex:1;padding:28px}
+.f-in{background:rgba(29,78,216,.22);border:1px solid rgba(29,78,216,.28)}
+.f-out{background:rgba(220,38,38,.18);border:1px solid rgba(220,38,38,.22)}
+.f-net{background:rgba(5,150,105,.18);border:1px solid rgba(5,150,105,.22)}
+.f-arr{display:flex;align-items:center;justify-content:center;padding:0 12px;color:rgba(255,255,255,.18);font-size:18px;flex-shrink:0}
+@media(max-width:600px){.f-arr{transform:rotate(90deg);padding:8px 0}}
+.f-lbl{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.f-in .f-lbl{color:var(--blue-light)}.f-out .f-lbl{color:#FCA5A5}.f-net .f-lbl{color:#6EE7B7}
+.f-amt{font-family:var(--fh);font-size:30px;font-weight:800;color:white;line-height:1;margin-bottom:12px}
+.f-rows{display:flex;flex-direction:column;gap:4px}
+.f-row{display:flex;justify-content:space-between;font-size:13px}
+.f-rn{color:rgba(255,255,255,.38)}.f-rv{color:rgba(255,255,255,.7);font-weight:600;font-family:var(--fh)}
+
+/* INVERSION */
+#inversion{background:var(--dark)}
+.inv-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+@media(max-width:880px){.inv-cards{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}}
+.inv-card{border-radius:var(--r-xl);padding:36px;position:relative;overflow:hidden}
+.ic-min{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.ic-ideal{background:rgba(29,78,216,.14);border:1px solid rgba(29,78,216,.32)}
+.ic-opt{background:rgba(234,88,12,.11);border:1px solid rgba(234,88,12,.28)}
+.ic-tag{display:inline-block;font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:var(--r-full);margin-bottom:20px}
+.t-min{background:rgba(255,255,255,.08);color:rgba(255,255,255,.45)}
+.t-ideal{background:rgba(29,78,216,.28);color:var(--blue-light)}
+.t-opt{background:rgba(234,88,12,.22);color:var(--orange-light)}
+.ic-usd{font-family:var(--fh);font-size:clamp(36px,5vw,52px);font-weight:900;line-height:1;letter-spacing:-.02em;color:var(--white);margin-bottom:6px}
+.ic-ars{font-size:13px;color:rgba(255,255,255,.28);margin-bottom:24px}
+.ic-div{height:1px;background:rgba(255,255,255,.07);margin-bottom:24px}
+.ic-items{display:flex;flex-direction:column;gap:12px}
+.ic-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.5);line-height:1.45}
+.ic-chk{width:16px;height:16px;flex-shrink:0;margin-top:2px}
+.ic-glow{position:absolute;bottom:-50px;right:-50px;width:160px;height:160px;border-radius:50%;filter:blur(55px);pointer-events:none}
+.g-b{background:rgba(29,78,216,.3)}.g-o{background:rgba(234,88,12,.25)}
+.rate-note{margin-top:24px;padding:18px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:var(--r-md);font-size:13px;color:rgba(255,255,255,.32);line-height:1.65}
+
+/* RIESGOS */
+#riesgos{background:var(--gray-50)}
+.rsk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;margin-top:48px}
+.rsk-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:28px;position:relative;transition:transform 200ms,box-shadow 200ms}
+.rsk-card:hover{transform:translateY(-2px);box-shadow:var(--sh-md)}
+.rsk-sev{display:inline-flex;align-items:center;gap:6px;font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 10px;border-radius:var(--r-full);margin-bottom:16px}
+.sev-h{background:var(--red-light);color:var(--red)}
+.sev-m{background:var(--yellow-light);color:var(--yellow)}
+.sev-l{background:var(--green-light);color:var(--green)}
+.rsk-n{position:absolute;top:20px;right:20px;font-family:var(--fh);font-size:38px;font-weight:900;color:var(--gray-100);line-height:1}
+.rsk-ttl{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:10px;padding-right:36px;line-height:1.35}
+.rsk-desc{font-size:13px;color:var(--gray-600);line-height:1.65}
+
+/* METRICAS */
+#metricas{background:var(--white)}
+.met-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+@media(max-width:600px){.met-grid{grid-template-columns:1fr}}
+.met-card{background:var(--dark);border-radius:var(--r-lg);padding:36px;position:relative;overflow:hidden}
+.met-ico{width:46px;height:46px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.met-ttl{font-size:19px;font-weight:700;color:var(--white);margin-bottom:10px}
+.met-desc{font-size:14px;color:rgba(255,255,255,.42);line-height:1.65}
+.met-bar{position:absolute;bottom:0;left:0;right:0;height:3px}
+
+/* FOOTER */
+#footer{background:var(--dark);padding:48px 0;border-top:1px solid rgba(255,255,255,.05)}
+.ft-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.ft-brand{font-family:var(--fh);font-size:18px;font-weight:800;color:var(--white)}
+.ft-sub{font-size:13px;color:rgba(255,255,255,.22);margin-top:4px}
+.ft-tag{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--orange);letter-spacing:.07em;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="#hero" class="nav-logo"><span class="nav-dot"></span>Delivery Berisso</a>
+    <ul class="nav-links">
+      <li><a href="#oportunidad">Oportunidad</a></li>
+      <li><a href="#modelo">Modelo</a></li>
+      <li><a href="#fases">Plan</a></li>
+      <li><a href="#economics">Economics</a></li>
+      <li><a href="#inversion">Inversión</a></li>
+      <li><a href="#riesgos">Riesgos</a></li>
+    </ul>
+    <button class="nav-tog" onclick="toggleNav()" aria-label="Menú">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="5" width="18" height="2" rx="1" fill="white"/><rect x="2" y="10" width="18" height="2" rx="1" fill="white"/><rect x="2" y="15" width="18" height="2" rx="1" fill="white"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="h-grid"></div>
+  <div class="h-glow h-g1"></div>
+  <div class="h-glow h-g2"></div>
+  <div class="h-cnt">
+    <div class="wrap">
+      <div class="h-badge"><span class="h-badge-dot"></span>Plan de Negocios &mdash; 2026</div>
+      <h1 class="h-title">El delivery<br>que Berisso<br><span class="acc">necesita.</span></h1>
+      <p class="h-sub">100.000 habitantes. Rappi y PedidosYa sin cobertura real. Una oportunidad sin explotar en la puerta de al lado.</p>
+      <div class="h-stats">
+        <div class="s-pill"><span class="s-num">100k<sup>+</sup></span><span class="s-div"></span><span class="s-lbl">habitantes</span></div>
+        <div class="s-pill"><span class="s-num">0</span><span class="s-div"></span><span class="s-lbl">competidores reales</span></div>
+        <div class="s-pill"><span class="s-num">8–12%</span><span class="s-div"></span><span class="s-lbl">comisión propuesta</span></div>
+      </div>
+      <div class="h-hint"><span class="h-line"></span>SCROLL PARA VER EL PLAN</div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 OPORTUNIDAD -->
+<section id="oportunidad">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--red)"></span><span style="color:var(--red)">01 — Oportunidad</span></div>
+      <h2 class="s-title">El mercado está<br>esperando.</h2>
+      <p class="s-lead">Datos verificados con pruebas de campo directas &mdash; no solo búsquedas online. Los dos líderes del sector no operan en Berisso.</p>
+    </div>
+    <div class="opp-grid rv">
+      <div class="comp-card comp-dark">
+        <div class="comp-name comp-name-d">Rappi</div>
+        <div class="zero">CERO</div>
+        <p class="comp-det comp-det-d">Cobertura cero confirmada en Berisso Centro. No tiene operación en ningún punto del Gran La Plata.</p>
+        <div class="comp-proof"><span class="proof-dot"></span>Verificado con prueba de campo</div>
+      </div>
+      <div class="comp-card comp-light">
+        <div class="comp-name comp-name-l">PedidosYa</div>
+        <div class="zero">CERO</div>
+        <p class="comp-det comp-det-l">Cobertura cero en el rubro Súper/almacén en Berisso Centro. Los comercios que los usaban se bajaron por el costo de las comisiones.</p>
+        <div class="comp-proof"><span class="proof-dot"></span>Verificado con prueba de campo</div>
+      </div>
+    </div>
+    <div class="mkt-block rv">
+      <div>
+        <div class="mkt-num">100.000<sup>+</sup></div>
+        <div class="mkt-lbl">habitantes en el partido de Berisso</div>
+      </div>
+      <p class="mkt-desc">Suficiente escala para un negocio de delivery sostenible. Una ciudad entera sin una sola app local funcionando &mdash; ese es el punto de partida.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 MODELO -->
+<section id="modelo">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--orange)"></span><span style="color:var(--orange)">02 — Modelo de negocio</span></div>
+      <h2 class="s-title" style="color:white">Agregador puro.<br>Sin inventario.</h2>
+      <p class="s-lead" style="color:rgba(255,255,255,.45)">Conectamos comercios existentes con clientes y organizamos el envío. Sin almacén propio ni stock &mdash; capital inicial mínimo.</p>
+    </div>
+    <div class="mod-grid">
+      <div class="mod-feat rv d1">
+        <div class="mod-ico ico-b">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Sin almacén propio</h3>
+        <p>No hay inventario que financiar. Los comercios ya existen, ya tienen sus productos. Ponemos la tecnología y la logística.</p>
+      </div>
+      <div class="mod-feat rv d2">
+        <div class="mod-ico ico-o">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Repartidores propios</h3>
+        <p>Reclutados como empleo local. La pizzería de Pablo ya recibe candidatos a diario &mdash; el pool de recursos humanos está ahí.</p>
+      </div>
+      <div class="mod-feat rv d3">
+        <div class="mod-ico ico-g">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        </div>
+        <h3>Comercios piloto</h3>
+        <p>Pizzería de Pablo (2 locales en Berisso, 1 en La Plata) como ancla. Más peluquería local y farmacia para venta libre.</p>
+      </div>
+      <div class="mod-feat rv d4">
+        <div class="mod-ico ico-p">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Expansión planificada</h3>
+        <p>Fase 1: todo Berisso. Fase 2: Los Talas + Ensenada cuando haya escala y repartidores con capacidad disponible.</p>
+      </div>
+    </div>
+    <div class="comm-wrap rv">
+      <div class="comm-hdr">¿Por qué los comercios van a elegirnos? &mdash; Comparación de comisiones</div>
+      <div class="comm-bars">
+        <div class="c-row">
+          <span class="c-lbl">Rappi / PY</span>
+          <div class="c-track"><div class="c-fill b-r" data-w="82">25–35%</div></div>
+        </div>
+        <div class="c-row">
+          <span class="c-lbl">Con logística</span>
+          <div class="c-track"><div class="c-fill b-o" data-w="52">15–18%</div></div>
+        </div>
+        <div class="c-row">
+          <span class="c-lbl">Solo marketplace</span>
+          <div class="c-track"><div class="c-fill b-b" data-w="28">8–12%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 FASES -->
+<section id="fases">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--blue)"></span><span style="color:var(--blue)">03 — Plan de implementación</span></div>
+      <h2 class="s-title">Del primer comercio<br>al lanzamiento.</h2>
+      <p class="s-lead">Cinco etapas con timing real. El desarrollo de la app corre en paralelo a la validación comercial.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item rv d1">
+        <div class="tl-dot d-0">0</div>
+        <div class="tl-body">
+          <div class="tl-phase">Etapa 0</div>
+          <div class="tl-ttl">Validación comercial</div>
+          <div class="tl-time">Semanas 1–2</div>
+          <div class="tl-tasks">
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reunión formal con Pablo (pizzería) &mdash; cerrar compromiso de lanzamiento</span></div>
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sumar 5–10 comercios (almacenes, kioscos, rotiserías) puerta a puerta. Comisión reducida o nula los primeros 60–90 días</span></div>
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Conseguir farmacia aliada habilitada para venta libre</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item rv d2">
+        <div class="tl-dot d-1">1</div>
+        <div class="tl-body">
+          <div class="tl-phase">Etapa 1</div>
+          <div class="tl-ttl">Desarrollo de la app</div>
+          <div class="tl-time">En paralelo &mdash; 6 a 10 semanas</div>
+          <div class="tl-tasks">
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>App nativa Android + iOS con Flutter o React Native (una sola base de código)</span></div>
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reclutar 3–5 repartidores con timing ajustado al lanzamiento</span></div>
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#EFF6FF"/><path d="M5 9l3 3 5-5" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Definir comisión a comercios y cargo de envío al usuario</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item rv d3">
+        <div class="tl-dot d-2">2</div>
+        <div class="tl-body">
+          <div class="tl-phase">Etapa 2</div>
+          <div class="tl-ttl">Lanzamiento piloto</div>
+          <div class="tl-time">Una vez aprobada la app en ambas tiendas</div>
+          <p class="tl-txt">Lanzar con los comercios confirmados, la farmacia y los repartidores. Difusión por redes locales y boca en boca de la pizzería de Pablo, que ya tiene reconocimiento en Berisso.</p>
+        </div>
+      </div>
+      <div class="tl-item rv d4">
+        <div class="tl-dot d-3">3</div>
+        <div class="tl-body">
+          <div class="tl-phase">Etapa 3</div>
+          <div class="tl-ttl">Medición y ajuste</div>
+          <div class="tl-time">Primer mes post-lanzamiento</div>
+          <p class="tl-txt">Medir pedidos por semana, ticket promedio, retención y costo real por entrega vs. lo cobrado. Ajustar precios antes de sumar más comercios si el margen no cierra.</p>
+        </div>
+      </div>
+      <div class="tl-item rv d5">
+        <div class="tl-dot d-4">4</div>
+        <div class="tl-body">
+          <div class="tl-phase">Etapa 4</div>
+          <div class="tl-ttl">Expansión</div>
+          <div class="tl-time">Una vez validado el piloto</div>
+          <div class="tl-tasks">
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#FFF7ED"/><path d="M5 9l3 3 5-5" stroke="#EA580C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Más comercios en Berisso usando el caso piloto como prueba social</span></div>
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#FFF7ED"/><path d="M5 9l3 3 5-5" stroke="#EA580C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Los Talas cuando haya repartidores con capacidad disponible</span></div>
+            <div class="t-item"><svg class="t-chk" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#FFF7ED"/><path d="M5 9l3 3 5-5" stroke="#EA580C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Evaluar Ensenada como expansión adicional (ciudad vecina bien conectada)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 UNIT ECONOMICS -->
+<section id="economics">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--green)"></span><span style="color:var(--green)">04 — Unit economics</span></div>
+      <h2 class="s-title">Cómo se gana plata<br>por pedido.</h2>
+      <p class="s-lead">Matemática simple. Lo que hay que validar con datos reales en la Etapa 3.</p>
+    </div>
+    <div class="eco-box rv">
+      <div class="eco-hdr">
+        <span class="eco-lbl">Ejemplo — pedido promedio de $15.000 ARS</span>
+        <span class="eco-note">Cifras ilustrativas &mdash; a validar con operación real</span>
+      </div>
+      <div class="flow">
+        <div class="f-block f-in">
+          <div class="f-lbl">Ingresos</div>
+          <div class="f-amt">$3.500</div>
+          <div class="f-rows">
+            <div class="f-row"><span class="f-rn">Comisión 10%</span><span class="f-rv">$1.500</span></div>
+            <div class="f-row"><span class="f-rn">Cargo de envío</span><span class="f-rv">$2.000</span></div>
+          </div>
+        </div>
+        <div class="f-arr">→</div>
+        <div class="f-block f-out">
+          <div class="f-lbl">Costos</div>
+          <div class="f-amt">$1.800</div>
+          <div class="f-rows">
+            <div class="f-row"><span class="f-rn">Pago repartidor</span><span class="f-rv">$1.800</span></div>
+            <div class="f-row"><span class="f-rn">Pasarela de pago</span><span class="f-rv">a confirmar</span></div>
+          </div>
+        </div>
+        <div class="f-arr">→</div>
+        <div class="f-block f-net">
+          <div class="f-lbl">Margen bruto</div>
+          <div class="f-amt">$1.700</div>
+          <div class="f-rows">
+            <div class="f-row"><span class="f-rn">Por pedido</span><span class="f-rv">~11%</span></div>
+            <div class="f-row"><span class="f-rn">Antes de pasarela</span><span class="f-rv" style="color:#FCD34D">⚠ pendiente</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 INVERSIÓN -->
+<section id="inversion">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--orange)"></span><span style="color:var(--orange)">05 — Inversión inicial</span></div>
+      <h2 class="s-title" style="color:white">Tres escenarios.<br>Un negocio real.</h2>
+      <p class="s-lead" style="color:rgba(255,255,255,.45)">Conversión a USD al tipo de cambio de referencia de $1.500 (junio 2026). Los montos en pesos se mueven con la inflación.</p>
+    </div>
+    <div class="inv-cards">
+      <div class="inv-card ic-min rv d1">
+        <span class="ic-tag t-min">Mínimo</span>
+        <div class="ic-usd">USD 1.000</div>
+        <div class="ic-ars">~$1.500.000 ARS</div>
+        <div class="ic-div"></div>
+        <div class="ic-items">
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(255,255,255,.07)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="rgba(255,255,255,.38)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Cuentas de desarrollador (Google Play $25 + Apple $99)</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(255,255,255,.07)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="rgba(255,255,255,.38)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>3–4 meses de monotributo Categoría A (~USD 28/mes)</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(255,255,255,.07)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="rgba(255,255,255,.38)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Garantía mínima a 3 repartidores por 3–4 semanas</span></div>
+          <div class="ic-item" style="opacity:.35"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(255,255,255,.05)"/><path d="M5 5l6 6M11 5l-6 6" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-linecap="round"/></svg><span>Sin marketing pago ni gestoría profesional</span></div>
+        </div>
+      </div>
+      <div class="inv-card ic-ideal rv d2">
+        <div class="ic-glow g-b"></div>
+        <span class="ic-tag t-ideal">Ideal</span>
+        <div class="ic-usd">USD 2.333</div>
+        <div class="ic-ars">~$3.500.000 ARS</div>
+        <div class="ic-div"></div>
+        <div class="ic-items">
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(29,78,216,.28)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Todo lo del escenario mínimo</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(29,78,216,.28)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Gestoría/contador desde el día uno (~USD 27–53/mes)</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(29,78,216,.28)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>4–5 repartidores garantizados por 6–8 semanas</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(29,78,216,.28)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Marketing geolocalizado 3 meses + branding básico</span></div>
+        </div>
+      </div>
+      <div class="inv-card ic-opt rv d3">
+        <div class="ic-glow g-o"></div>
+        <span class="ic-tag t-opt">Óptimo</span>
+        <div class="ic-usd">USD 6.533</div>
+        <div class="ic-ars">~$9.800.000 ARS</div>
+        <div class="ic-div"></div>
+        <div class="ic-items">
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Runway completo de 5–6 meses</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Moto 110cc propia (desde USD 832)</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reserva para consulta legal (esquema farmacia)</span></div>
+          <div class="ic-item"><svg class="ic-chk" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="rgba(234,88,12,.22)"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Envío gratis de lanzamiento como gancho para primeros usuarios</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="rate-note rv">Tipo de cambio: $1.500 ARS/USD (junio 2026) &mdash; reconfirmar cerca del lanzamiento. <strong style="color:rgba(255,255,255,.45)">Estructura legal recomendada:</strong> monotributo individual de quien factura + acuerdo privado por escrito sobre roles, dedicación y condiciones de salida. Sin necesidad de SRL todavía.</p>
+  </div>
+</section>
+
+<!-- 06 RIESGOS -->
+<section id="riesgos">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--yellow)"></span><span style="color:var(--yellow)">06 — Riesgos a vigilar</span></div>
+      <h2 class="s-title">Lo que puede fallar<br>y cómo mitigarlo.</h2>
+      <p class="s-lead">Ningún plan sobrevive sin ajustes. Estos son los seis puntos de quiebre a monitorear desde el día uno.</p>
+    </div>
+    <div class="rsk-grid">
+      <div class="rsk-card rv d1"><span class="rsk-n">1</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Comercios que no ven valor y se bajan tras el período gratis</div><p class="rsk-desc">Comisión reducida o nula los primeros 60–90 días + datos concretos de pedidos durante la prueba como argumento de continuidad.</p></div>
+      <div class="rsk-card rv d2"><span class="rsk-n">2</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Volumen insuficiente para sostener el pago a los repartidores</div><p class="rsk-desc">Garantía mínima diaria en las primeras semanas + ajustar número de repartidores activos a la demanda real. No escalar antes de tener los datos.</p></div>
+      <div class="rsk-card rv d3"><span class="rsk-n">3</span><span class="rsk-sev sev-h">Alto</span><div class="rsk-ttl">Costo real por entrega mayor que comisión + envío</div><p class="rsk-desc">Cotizar con moto-mandados locales antes del lanzamiento. Ajustar precios en Etapa 3 antes de escalar si el margen no cierra.</p></div>
+      <div class="rsk-card rv d4"><span class="rsk-n">4</span><span class="rsk-sev sev-l">Bajo</span><div class="rsk-ttl">PedidosYa activa flota propia en Berisso</div><p class="rsk-desc">Poco probable a corto plazo: ni siquiera cubre toda La Plata con flota propia. Ventana de 12–18 meses sin presión competitiva real.</p></div>
+      <div class="rsk-card rv d5"><span class="rsk-n">5</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Fricciones por dedicación desigual entre los socios</div><p class="rsk-desc">Acuerdo privado por escrito desde el día uno: roles, horas semanales esperadas y qué pasa si alguien quiere salir del proyecto.</p></div>
+      <div class="rsk-card rv"><span class="rsk-n">6</span><span class="rsk-sev sev-m">Medio</span><div class="rsk-ttl">Demoras en el desarrollo (rechazos de Apple, bugs, scope creep)</div><p class="rsk-desc">Dejar margen extra para revisión de Apple (1–2 semanas habituales). Congelar el scope antes de empezar a programar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 MÉTRICAS -->
+<section id="metricas">
+  <div class="wrap">
+    <div class="rv">
+      <div class="s-tag"><span class="s-tagline" style="background:var(--blue-mid)"></span><span style="color:var(--blue-mid)">07 — Métricas de éxito</span></div>
+      <h2 class="s-title">Cuatro números que<br>dicen si funciona.</h2>
+      <p class="s-lead">Si estas métricas no mejoran semana a semana, hay algo para ajustar antes de seguir escalando.</p>
+    </div>
+    <div class="met-grid">
+      <div class="met-card rv d1">
+        <div class="met-ico" style="background:rgba(29,78,216,.2)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="met-ttl">Pedidos por semana por comercio</div>
+        <p class="met-desc">El indicador de tracción real. Si un comercio no pide dos semanas seguidas, hay un problema de producto o de demanda que resolver antes de seguir.</p>
+        <div class="met-bar" style="background:linear-gradient(90deg,#1D4ED8,#3B82F6)"></div>
+      </div>
+      <div class="met-card rv d2">
+        <div class="met-ico" style="background:rgba(234,88,12,.2)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="met-ttl">Ticket promedio</div>
+        <p class="met-desc">Determina el margen absoluto. Un ticket bajo puede hacer inviable la logística aunque el porcentaje de comisión sea correcto.</p>
+        <div class="met-bar" style="background:linear-gradient(90deg,#EA580C,#FB923C)"></div>
+      </div>
+      <div class="met-card rv d3">
+        <div class="met-ico" style="background:rgba(5,150,105,.2)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="met-ttl">Retención de comercios (mes 1)</div>
+        <p class="met-desc">Porcentaje que repite después del primer mes. Si cae, los comercios no están viendo suficiente valor &mdash; hay que entender por qué antes de sumar más.</p>
+        <div class="met-bar" style="background:linear-gradient(90deg,#059669,#10B981)"></div>
+      </div>
+      <div class="met-card rv d4">
+        <div class="met-ico" style="background:rgba(220,38,38,.18)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FCA5A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
+        <div class="met-ttl">Costo real por entrega vs. cobrado</div>
+        <p class="met-desc">Si el costo real supera lo que entra por comisión + envío, el modelo no cierra. Ajustar antes de escalar, no después.</p>
+        <div class="met-bar" style="background:linear-gradient(90deg,#DC2626,#EF4444)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="ft-in">
+      <div>
+        <div class="ft-brand">Delivery Berisso</div>
+        <div class="ft-sub">Plan de negocios &mdash; Junio 2026</div>
+      </div>
+      <div class="ft-tag">Berisso &mdash; Buenos Aires &mdash; Argentina</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Scroll reveal
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+
+  // Nav scroll
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll',function(){
+    nav.classList.toggle('scrolled',window.scrollY>36);
+  },{passive:true});
+
+  // Commission bars
+  var barObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.c-fill').forEach(function(b){
+          b.style.width = b.dataset.w + '%';
+        });
+        barObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.35});
+  var cw = document.querySelector('.comm-wrap');
+  if(cw) barObs.observe(cw);
+
+  // Mobile nav
+  window.toggleNav = function(){
+    var ul = document.querySelector('.nav-links');
+    var open = ul.dataset.open === '1';
+    if(open){
+      ul.removeAttribute('style');
+      ul.dataset.open = '0';
+    } else {
+      ul.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:rgba(6,13,31,.97);backdrop-filter:blur(16px);padding:24px 20px;gap:16px;z-index:99;border-top:1px solid rgba(255,255,255,.06)';
+      ul.dataset.open = '1';
+    }
+  };
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click',function(){
+      var ul = document.querySelector('.nav-links');
+      ul.removeAttribute('style');
+      ul.dataset.open = '0';
+    });
+  });
+})();
+</script>
+</body>
+</html>
